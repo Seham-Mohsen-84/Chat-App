@@ -20,9 +20,8 @@
 <body>
     <script>
         window.addEventListener("DOMContentLoaded", function() {
-            // console.log('loaded');
-            window.Echo.channel('test')
-                .listen('TestEvent', (e) => {
+            window.Echo.channel('new')
+                .listen('NewEvent', (e) => {
                     console.log(e);
                 });
         });
