@@ -34,4 +34,16 @@ class TestEvent implements ShouldBroadcast
             new Channel('test'),
         ];
     }
+
+     public function broadcastAs(): string
+    {
+        return 'test-event';
+    }
+
+    public function broadcastWith(): array
+    {
+        return [
+            'message' => $this->value,
+        ];
+    }
 }
